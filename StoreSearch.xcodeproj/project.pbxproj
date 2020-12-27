@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0DF68125991EB100574CA6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0DF68025991EB100574CA6 /* GradientView.swift */; };
+		2B0DF6852599229B00574CA6 /* BounceAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0DF6842599229B00574CA6 /* BounceAnimationController.swift */; };
 		2B245595259551CE00ACE403 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B245594259551CE00ACE403 /* SearchResult.swift */; };
+		2B4B556C2599279900517932 /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B556B2599279900517932 /* SlideOutAnimationController.swift */; };
 		2BA7B8332594D81700A8153D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7B8322594D81700A8153D /* AppDelegate.swift */; };
 		2BA7B8352594D81700A8153D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7B8342594D81700A8153D /* SceneDelegate.swift */; };
 		2BA7B8372594D81700A8153D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA7B8362594D81700A8153D /* SearchViewController.swift */; };
@@ -22,7 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B0DF68025991EB100574CA6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		2B0DF6842599229B00574CA6 /* BounceAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceAnimationController.swift; sourceTree = "<group>"; };
 		2B245594259551CE00ACE403 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		2B4B556B2599279900517932 /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		2BA7B82F2594D81700A8153D /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA7B8322594D81700A8153D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BA7B8342594D81700A8153D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B4B556F259927AA00517932 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				2B0DF6842599229B00574CA6 /* BounceAnimationController.swift */,
+				2B4B556B2599279900517932 /* SlideOutAnimationController.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		2BA7B8262594D81700A8153D = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +83,7 @@
 		2BA7B8312594D81700A8153D /* StoreSearch */ = {
 			isa = PBXGroup;
 			children = (
+				2B4B556F259927AA00517932 /* Animations */,
 				2BFFC2D625982BDE001CCB6D /* View Controllers */,
 				2BFFC2D825982C45001CCB6D /* Resources */,
 				2BFFC2D725982C01001CCB6D /* Xib Files */,
@@ -102,6 +118,7 @@
 			children = (
 				2BA7B83B2594D81900A8153D /* Assets.xcassets */,
 				2BA7B8382594D81700A8153D /* Main.storyboard */,
+				2B0DF68025991EB100574CA6 /* GradientView.swift */,
 				2B245594259551CE00ACE403 /* SearchResult.swift */,
 				2BD8325C259564C600CF1582 /* SearchResultCell.swift */,
 				2BFFC2CE2597FAF7001CCB6D /* UIImageView+DownloadImage.swift */,
@@ -185,9 +202,12 @@
 				2BA7B8332594D81700A8153D /* AppDelegate.swift in Sources */,
 				2BFFC2CF2597FAF7001CCB6D /* UIImageView+DownloadImage.swift in Sources */,
 				2B245595259551CE00ACE403 /* SearchResult.swift in Sources */,
+				2B0DF6852599229B00574CA6 /* BounceAnimationController.swift in Sources */,
 				2BA7B8352594D81700A8153D /* SceneDelegate.swift in Sources */,
 				2BD8325D259564C600CF1582 /* SearchResultCell.swift in Sources */,
+				2B0DF68125991EB100574CA6 /* GradientView.swift in Sources */,
 				2BFFC2D42598276F001CCB6D /* DetailViewController.swift in Sources */,
+				2B4B556C2599279900517932 /* SlideOutAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
