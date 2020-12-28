@@ -18,6 +18,13 @@ class DetailViewController: UIViewController {
   
   var searchResult: SearchResult!
   var downloadTask: URLSessionDownloadTask?
+  
+  enum AnimationStyle {
+    case slide
+    case fade
+  }
+  
+  var dismissStyle = AnimationStyle.fade
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,6 +52,7 @@ class DetailViewController: UIViewController {
   
   // MARK: - Actions
   @IBAction func close() {
+    dismissStyle = .slide
     dismiss(animated: true, completion: nil)
   }
   
@@ -92,7 +100,8 @@ class DetailViewController: UIViewController {
     print("deinit \(self)")
     downloadTask?.cancel()
   }
-}
+  
+} // End Of DetailViewController Class
 
 extension DetailViewController: UIGestureRecognizerDelegate {
   func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
@@ -106,6 +115,11 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
   }
   
   func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-    return SlideOutAnimationController()
+    switch dismissStyle {
+    case .slide:
+      return SlideOutAnimationController()
+    case .fade:
+      return FadeOutAnimationController()
+    }
   }
 }
