@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="56" width="667" height="32"/>
                                 <items>
                                     <barButtonItem style="plain" id="k21-VZ-JAJ">
-                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="w9S-a3-SOW">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="w9S-a3-SOW">
                                             <rect key="frame" x="20" y="0.0" width="627" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
@@ -89,24 +89,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We're in landscape" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJE-tR-93F">
-                                <rect key="frame" x="261" y="177" width="145" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-kD-0KP">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ol2-6J-N5H"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="YOQ-pi-j25"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gae-oU-S9x" id="VBm-NN-c1D"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jWw-Yc-xi1">
+                                <rect key="frame" x="272" y="327" width="123" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" name="AccentColor"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="gae-oU-S9x" eventType="valueChanged" id="NGe-vd-lb6"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bGb-AF-Mkg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nJE-tR-93F" firstAttribute="centerX" secondItem="edw-vN-coV" secondAttribute="centerX" id="1ih-3F-tiM"/>
-                            <constraint firstItem="nJE-tR-93F" firstAttribute="centerY" secondItem="edw-vN-coV" secondAttribute="centerY" id="AV1-Q1-W7D"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="jWw-Yc-xi1" id="npV-MM-aW3"/>
+                        <outlet property="scrollView" destination="Cq3-kD-0KP" id="Qpg-Ry-FCz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xc-7a-Pdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="963"/>
+            <point key="canvasLocation" x="131.78410794602701" y="962.39999999999998"/>
         </scene>
         <!--Detail-->
         <scene sceneID="GIn-Pm-RDF">
