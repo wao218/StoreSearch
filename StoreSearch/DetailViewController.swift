@@ -16,8 +16,15 @@ class DetailViewController: UIViewController {
   @IBOutlet var genreLabel: UILabel!
   @IBOutlet var priceButton: UIButton!
   
-  var searchResult: SearchResult!
+  var searchResult: SearchResult! {
+    didSet {
+      if isViewLoaded {
+        updateUI()
+      }
+    }
+  }
   var downloadTask: URLSessionDownloadTask?
+  var isPopUp = false
   
   enum AnimationStyle {
     case slide
@@ -28,21 +35,30 @@ class DetailViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    popupView.layer.cornerRadius = 10
-    let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
-    gestureRecognizer.cancelsTouchesInView = false
-    gestureRecognizer.delegate = self
-    view.addGestureRecognizer(gestureRecognizer)
     
+    if isPopUp {
+      popupView.layer.cornerRadius = 10
+      let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
+      gestureRecognizer.cancelsTouchesInView = false
+      gestureRecognizer.delegate = self
+      view.addGestureRecognizer(gestureRecognizer)
+      
+      // Gradient View
+      view.backgroundColor = UIColor.clear
+      let dimmingView = GradientView(frame: CGRect.zero)
+      dimmingView.frame = view.bounds
+      view.insertSubview(dimmingView, at: 0)
+    } else {
+      view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+      popupView.isHidden = true
+      if let displayName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
+        title = displayName
+      }
+    }
     if searchResult != nil {
       updateUI()
     }
     
-    // Gradient View
-    view.backgroundColor = UIColor.clear
-    let dimmingView = GradientView(frame: CGRect.zero)
-    dimmingView.frame = view.bounds
-    view.insertSubview(dimmingView, at: 0)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -94,6 +110,8 @@ class DetailViewController: UIViewController {
     if let largeURL = URL(string: searchResult.imageLarge) {
       downloadTask = artworkImageView.loadImage(url: largeURL)
     }
+    
+    popupView.isHidden = false
   }
   
   deinit {
