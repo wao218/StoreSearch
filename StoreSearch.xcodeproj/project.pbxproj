@@ -21,6 +21,7 @@
 		2BA7B83A2594D81700A8153D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7B8382594D81700A8153D /* Main.storyboard */; };
 		2BA7B83C2594D81900A8153D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BA7B83B2594D81900A8153D /* Assets.xcassets */; };
 		2BCB732F259BEFEE00FF68CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BCB7331259BEFEE00FF68CD /* InfoPlist.strings */; };
+		2BCB7337259D2E0000FF68CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB7336259D2E0000FF68CD /* MenuViewController.swift */; };
 		2BD8325D259564C600CF1582 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD8325C259564C600CF1582 /* SearchResultCell.swift */; };
 		2BFAA5A0259BDEAA0019A1F0 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAA5A2259BDEAA0019A1F0 /* LoadingCell.xib */; };
 		2BFAA5A3259BDEB40019A1F0 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFAA5A5259BDEB40019A1F0 /* SearchResultCell.xib */; };
@@ -47,6 +48,7 @@
 		2BA7B8402594D81900A8153D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BCB7330259BEFEE00FF68CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2BCB7333259BEFF800FF68CD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2BCB7336259D2E0000FF68CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2BD8325C259564C600CF1582 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		2BFAA59E259BDDAF0019A1F0 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 		2BFAA5A8259BDFC40019A1F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				2BFAA5A2259BDEAA0019A1F0 /* LoadingCell.xib */,
 				2BFAA5B8259BE6E00019A1F0 /* Localizable.strings */,
 				2BA7B8382594D81700A8153D /* Main.storyboard */,
+				2BCB7336259D2E0000FF68CD /* MenuViewController.swift */,
 				2B920ACD259BDC2200967473 /* NothingFoundCell.xib */,
 				2BA7B8342594D81700A8153D /* SceneDelegate.swift */,
 				2B920AC5259B6EAA00967473 /* Search.swift */,
@@ -192,6 +195,7 @@
 				2B920AC6259B6EAA00967473 /* Search.swift in Sources */,
 				2BA7B8372594D81700A8153D /* SearchViewController.swift in Sources */,
 				2BA7B8332594D81700A8153D /* AppDelegate.swift in Sources */,
+				2BCB7337259D2E0000FF68CD /* MenuViewController.swift in Sources */,
 				2B920AC3259A2B9400967473 /* FadeOutAnimationController.swift in Sources */,
 				2BFFC2CF2597FAF7001CCB6D /* UIImageView+DownloadImage.swift in Sources */,
 				2B245595259551CE00ACE403 /* SearchResult.swift in Sources */,
